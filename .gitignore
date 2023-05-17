@@ -1,0 +1,7 @@
+*.d
+*.o
+*.gch
+*.pch
+*.dll
+*.exe
+.vscode/*

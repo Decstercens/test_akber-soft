@@ -13,8 +13,23 @@
 Репозиторий должен содержать исходный код решения, тесты, необходимое описание для запуска.
 
 ## Сборка на Linux
-
+Этот проект был написан на Linux 5.19.0, Ubuntu 22.04 и скомпилирован GCC 11.3.0.
 ### Зависимости
-
+Для сборки этого проекта не потребуется определенного ПО, кроме GCC.
+```
+sudo apt install gcc
+```
 ### Сборка
+После копирования или скачивания репозитория перейдите в терминале в корень репозитория. Проект собирается при помощи данных команд в терминале.
+```
+gcc -c src/readString.c -o build/readString.o
+gcc -c src/hashItem.c -o build/hashItem.o
+gcc -c src/fileWork.c -o build/fileWork.o
+gcc -c src/saveStringAsHash.c -o build/saveStringAsHash.o
+gcc -o build/test_akber  build/readString.o build/saveStringAsHash.o build/hashItem.o build/fileWork.o -lm
 
+```
+После чего нужно ввести для открытя программы в терминале
+```
+./build/test_akber 
+```

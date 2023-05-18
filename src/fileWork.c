@@ -28,6 +28,7 @@ int write(char* fileName, hash hash, char* str){
         printf("File opening ERROR! File not found!\n");
         return 1;
     }
+    //Записываем обе переменные в файл, каждую с новой строки
     int stat=fprintf(fp,"%llu\n%s\n",hash,str);
     fclose(fp);
     return stat;

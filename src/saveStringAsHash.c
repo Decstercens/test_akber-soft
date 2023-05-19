@@ -16,12 +16,13 @@ int main(void){
         }
         else{
             printf("You're wrote string:\n%s\nAmount memory:\n%d\n",s,len);
-            hash = hash_function(s);
+            hash = hash_function(s,&len);
             if(findStr("hash.txt",hash)>=0){
                 write("hash.txt", hash,s);
             }
             hash=0;
         }
+        printf("If you want to exit press CTRL+C\n");
         free(s);
     }
     return 0;

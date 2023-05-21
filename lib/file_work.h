@@ -1,5 +1,6 @@
 #ifndef FILEWORK_H
 #define FILEWORK_H
-int findStr(char* file,hash hash);
-int write(char* fileName, hash hash, char* str);
+int findHash(hash hash);
+
+int writeHashStr( const hash hash,const char* str);
 #endif /*FILEWORK_H*/

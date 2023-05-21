@@ -16,11 +16,15 @@ int main(void){
         }
         else{
             printf("You're wrote string:\n%s\nAmount memory:\n%d\n",s,len);
-            hash = hash_function(s,&len);
-            if(findStr("hash.txt",hash)>=0){
-                write("hash.txt", hash,s);
+            hash = hashFunction(s,&len);
+            if(findHash(hash)>=0){
+                if(writeHashStr(hash,s)>=0){
+                    printf("Your string was saved in file\n");
+                }
+                else{
+                    printf("Error while writing in file\n");
+                }
             }
-            hash=0;
         }
         printf("If you want to exit press CTRL+C\n");
         free(s);

@@ -21,5 +21,4 @@ set(SOURCES
     src/hashItem.c
     src/readString.c
     src/saveStringAsHash.c)
-    
-add_executable(storage ${SOURCES})
+add_executable(test_akber-soft ${SOURCES})

@@ -10,7 +10,7 @@ const char* fileName="hash.txt";
 int findHash( const hash hash){
     FILE* fp;
     unsigned long long num;
-    fp=fopen(fileName,"r");//создаем поток на чтение из файла
+    fp=fopen(fileName,"a+");//создаем поток на чтение из файла
     if(!fp){
         printf("ERROR! File can't be opened!\n");
         return -1;
@@ -30,7 +30,7 @@ int findHash( const hash hash){
 //функция записи хеша и строки в файл
 int writeHashStr(const hash hash, const char* str){
     FILE* fp;
-    fp = fopen(fileName,"r+");//создаем поток на запись в файл
+    fp = fopen(fileName,"a+");//создаем поток на запись в файл
     if(!fp){
         printf("File opening ERROR! File not found!\n");
         return 1;
